@@ -17,12 +17,12 @@ jobs:
       - name: Remove `.Rprofile`
         shell: bash
         run: |
-          rm .Rprofile
+          rm -f .Rprofile
 
       - name: Publish the app
         uses: rstudio/actions/connect-publish@main
         with:
-          url: http://ec2-18-118-49-73.us-east-2.compute.amazonaws.com/rsconnect/
+          url: http://ec2-3-139-78-116.us-east-2.compute.amazonaws.com/rsconnect/
           api-key: ${{ secrets.CONNECT_API_KEY }}
           access-type: all
           show-logs: true
